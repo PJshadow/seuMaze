@@ -25,31 +25,34 @@
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid">
-            <!-- Center Logo -->
-            <div class="logo-container">
-                <img src="/images/logo.webp" alt="Seu Maze Logo" class="logo-img">
-            </div>
+        <div class="container">
+            <!-- Left Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <div class="logo-container">
+                    <img src="/images/logo.webp" alt="Seu Maze Logo" class="logo-img">
+                </div>
+                <span class="brand-text ms-3 d-none d-sm-block">Seu Maze Pizzas</span>
+            </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fs-3"></i>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <ul class="navbar-nav me-auto ps-lg-5 text-center"> <!-- Left side padding for logo -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item">
-                        <a class="nav-link nav-spacer-right" href="#home">Início</a>
+                        <a class="nav-link" href="#home">Início</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#products">Cardápio</a>
                     </li>
-                </ul>
-                <ul class="navbar-nav ms-auto pe-lg-5 text-center"> <!-- Right side padding for logo -->
                     <li class="nav-item">
-                        <a class="nav-link nav-spacer-left" href="#location">Localização</a>
+                        <a class="nav-link" href="#location">Localização</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://wa.me/5547989073870" target="_blank">Contato</a>
+                    <li class="nav-item mt-3 mt-lg-0 ms-lg-3">
+                        <a class="nav-link btn-nav-contact" href="https://wa.me/5547989073870"
+                            target="_blank">Contato</a>
                     </li>
                 </ul>
             </div>

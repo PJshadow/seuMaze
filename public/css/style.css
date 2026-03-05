@@ -29,36 +29,42 @@ h6,
     font-family: 'Outfit', sans-serif;
 }
 
-/* Navbar */
+/* Navbar - Modern Glassmorphism */
 .navbar {
-    background-color: var(--primary-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    /* Space for logo overlap */
+    background-color: rgba(139, 0, 0, 0.95) !important;
+    /* Slightly transparent brand color */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    transition: all 0.3s ease;
 }
 
+.navbar-brand {
+    color: white !important;
+    text-decoration: none;
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Inline Logo Container */
 .logo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 10px;
-    z-index: 1000;
-    width: 150px;
-    height: 150px;
+    width: 60px;
+    height: 60px;
     background: white;
     border-radius: 50%;
-    border: 5px solid var(--primary-color);
+    border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-}
-
-.logo-container:hover {
-    transform: translateX(-50%) scale(1.05);
 }
 
 .logo-img {
@@ -66,69 +72,86 @@ h6,
     height: auto;
 }
 
+.navbar-brand:hover .logo-container {
+    transform: scale(1.1);
+}
+
 .nav-link {
-    color: white !important;
-    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    margin: 5px 0;
-    /* Adjusted for mobile default */
-    transition: color 0.3s;
+    letter-spacing: 0.5px;
+    padding: 8px 15px !important;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Animated underline on hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .nav-link:hover {
-    color: var(--secondary-color) !important;
+    color: white !important;
 }
 
-/* Desktop styles for navbar spacer */
-@media (min-width: 992px) {
-    .nav-link {
-        margin: 0 15px;
-        /* Reset for desktop */
-    }
+.nav-link:not(.btn-nav-contact):hover::after {
+    width: 80%;
+}
 
-    .nav-spacer-right {
-        margin-right: 80px !important;
-    }
+/* Contact button in navbar */
+.btn-nav-contact {
+    background-color: #25D366 !important;
+    color: white !important;
+    border-radius: 30px;
+    padding: 8px 25px !important;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
 
-    .nav-spacer-left {
-        margin-left: 80px !important;
-    }
-
-    /* Padding helpers for logo space */
-    .ms-lg-auto {
-        margin-left: auto !important;
-    }
-
-    .me-lg-auto {
-        margin-right: auto !important;
-    }
+.btn-nav-contact:hover {
+    background-color: #128C7E !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
 }
 
 /* Mobile Navbar Adjustments */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: var(--primary-color);
-        /* Ensure full background */
-        padding: 20px 0;
-        margin-top: 60px;
-        /* Space for logo if needed or just padding */
-        text-align: center;
-    }
-
-    .logo-container {
-        width: 100px;
-        /* Smaller logo on mobile */
-        height: 100px;
-        top: 5px;
-    }
-
-    .navbar {
-        padding-bottom: 1rem;
+        background-color: rgba(139, 0, 0, 1);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
     .nav-link {
-        font-size: 1.1rem;
-        padding: 10px 0;
+        font-size: 1.2rem;
+        padding: 12px 0 !important;
+        margin: 5px 0;
+    }
+
+    .nav-link::after {
+        display: none;
+        /* Hide animated underline on mobile */
+    }
+
+    .btn-nav-contact {
+        display: block;
+        margin-top: 20px;
+        padding: 12px 20px !important;
+        font-size: 1.2rem;
+        background-color: #25D366 !important;
     }
 }
 
