@@ -166,7 +166,9 @@ h6,
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 90vh;
+    height: 70vh;
+    padding-top: 80px;
+    /* Offset for fixed navbar */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -199,6 +201,8 @@ h6,
     color: white;
     max-width: 800px;
     padding: 20px;
+    margin-top: 60px;
+    /* Push down to visually center below the fixed navbar */
     /* Glassmorphism effect */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -217,6 +221,23 @@ h6,
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 30px;
+}
+
+/* Hero Mobile Adjustments */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-content .btn-whatsapp {
+        font-size: 0.95rem;
+        padding: 12px 20px;
+    }
 }
 
 .btn-whatsapp {
