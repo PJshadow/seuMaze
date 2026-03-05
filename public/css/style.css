@@ -11,8 +11,12 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .nav-link, .btn-whatsapp, .hours-row.closed {
+    font-family: 'Outfit', sans-serif;
 }
 
 /* Navbar */
