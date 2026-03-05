@@ -357,9 +357,9 @@ section {
 
 .marquee-content {
     display: flex;
-    width: calc(300px * 6);
-    /* Width of image * number of total images */
-    animation: scrollLeft 45s linear infinite;
+    flex-shrink: 0;
+    width: max-content;
+    animation: scrollLeft 30s linear infinite;
 }
 
 .marquee-img {
@@ -391,7 +391,7 @@ section {
     }
 
     100% {
-        transform: translateX(calc(-280px * 3));
+        transform: translateX(-50%);
     }
 }
 
