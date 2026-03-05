@@ -344,30 +344,43 @@ section {
     /* For breakout container width */
     overflow: hidden;
     position: relative;
-    padding: 20px 0;
-    background: #111;
+    padding: 10px 0;
+    background: transparent;
+    /* Increased transparency base for effect */
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    /* Subtle dividing line above */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    /* Subtle dividing line below */
+}
+
+.marquee-container:hover {
+    /* No opacity change here anymore */
 }
 
 .marquee-content {
     display: flex;
-    width: calc(400px * 6);
+    width: calc(300px * 6);
     /* Width of image * number of total images */
-    animation: scrollLeft 25s linear infinite;
+    animation: scrollLeft 45s linear infinite;
 }
 
 .marquee-img {
-    width: 350px;
-    height: 250px;
+    width: 250px;
+    height: 180px;
     object-fit: cover;
     margin: 0 15px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.6;
+    /* Applied directly to image for proper blending */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
 }
 
 .marquee-img:hover {
-    transform: scale(1.05);
-    /* Pause or pop on hover for engagement */
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    opacity: 1;
+    /* Restore full color/opacity on hover */
 }
 
 .marquee-container:hover .marquee-content {
@@ -380,10 +393,8 @@ section {
     }
 
     100% {
-        transform: translateX(calc(-400px * 3));
+        transform: translateX(calc(-280px * 3));
     }
-
-    /* Scroll exactly half the width to loop seamlessly */
 }
 
 /* Locations */
