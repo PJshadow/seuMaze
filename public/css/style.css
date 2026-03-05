@@ -353,9 +353,7 @@ section {
     /* Subtle dividing line below */
 }
 
-.marquee-container:hover {
-    /* No opacity change here anymore */
-}
+
 
 .marquee-content {
     display: flex;
