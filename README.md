@@ -89,20 +89,18 @@ npx nodemon app.js
 
 ---
 
-## 📬 Contact
+## 🌐 Live Website
 
-- **WhatsApp:** [(47) 98907-3870](https://wa.me/5547989073870)
-- **Email:** contato@seumaze.com.br
-- **Address:** R. Pref. José Bauer, 349 — Bairro Rau, Jaraguá do Sul, SC, Brazil
+🔗 **[seumaze.com.br](https://seumaze.com.br)**
 
 ---
 
 ## 👨‍💻 Developed by
 
-**[Pierre Jr.](https://pierrejr.com)**
+**[Pierre Jr.](https://pierrejr.com)** — contact@pierrejr.com
 
 ---
 
 <p align="center">
-  <sub>© 2026 Seu Maze Pizzas. All rights reserved.</sub>
+  <sub>© 2026 Seu Maze Pizzas and Pierre Jr. All rights reserved.</sub>
 </p>
